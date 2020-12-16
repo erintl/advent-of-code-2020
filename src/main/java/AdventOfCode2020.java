@@ -7,6 +7,6 @@ public class AdventOfCode2020 {
     public static void main(String[] args) {
         System.out.println("hello advent 2020");
         PassportProcessing passportProcessing = new PassportProcessing();
-        passportProcessing.checkPassportsPart1();
+        passportProcessing.checkPassports();
     }
 }

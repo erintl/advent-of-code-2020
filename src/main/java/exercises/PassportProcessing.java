@@ -15,16 +15,34 @@ public class PassportProcessing {
     public PassportProcessing() {
     }
 
-    public void checkPassportsPart1() {
+    public void checkPassports() {
         readFile();
+        int completePassportCount = getCompletePassportCount();
+        int validPassportCount = getValidPassportCount();
+        System.out.printf("Complete passport count: %d\n", completePassportCount);
+        System.out.printf("Valid passport count: %d\n", validPassportCount);
+    }
+
+    private int getCompletePassportCount() {
+        int completeCount = 0;
+        for (Passport passport : passports) {
+            if (passport.isComplete()) {
+                completeCount++;
+            }
+        }
+        return completeCount;
+    }
+
+    private int getValidPassportCount() {
         int validCount = 0;
         for (Passport passport : passports) {
             if (passport.isValid()) {
                 validCount++;
             }
         }
-        System.out.printf("Valid passport count: %d\n", validCount);
+        return validCount;
     }
+
 
     private void readFile() {
         passports = new ArrayList<>();
