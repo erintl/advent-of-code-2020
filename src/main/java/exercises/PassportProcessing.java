@@ -43,7 +43,6 @@ public class PassportProcessing {
         return validCount;
     }
 
-
     private void readFile() {
         passports = new ArrayList<>();
         try {
