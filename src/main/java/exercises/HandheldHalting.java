@@ -107,7 +107,6 @@ public class HandheldHalting {
             }
         }
 
-//        System.out.println(instruction + ", ip = " + ip + ", acc = " + acc);
         switch (type) {
             case "acc" -> {
                 ip++;
